@@ -20,6 +20,7 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
 
     private ArrayList<Integer> listaimagens;
     private ArrayList<String> listapalavras;
+    private ArrayList<Integer> listaIdsButtons;
     private int indiceListaImagem;
 
     private TextView texto;
@@ -31,7 +32,8 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_jogo);
@@ -40,6 +42,7 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         imagem = findViewById(R.id.imageView2);
         indiceListaImagem = -1;
         listaimagens = new ArrayList<Integer>();
@@ -71,6 +74,40 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
 
         texto = findViewById(R.id.textView3);
 
+        listaIdsButtons = new ArrayList<Integer>();
+        listaIdsButtons.add(R.id.id01);
+        listaIdsButtons.add(R.id.id02);
+        listaIdsButtons.add(R.id.id03);
+        listaIdsButtons.add(R.id.id04);
+        listaIdsButtons.add(R.id.id05);
+        listaIdsButtons.add(R.id.id06);
+        listaIdsButtons.add(R.id.id07);
+        listaIdsButtons.add(R.id.id08);
+        listaIdsButtons.add(R.id.id09);
+        listaIdsButtons.add(R.id.id10);
+        listaIdsButtons.add(R.id.id11);
+        listaIdsButtons.add(R.id.id12);
+        listaIdsButtons.add(R.id.id13);
+        listaIdsButtons.add(R.id.id14);
+        listaIdsButtons.add(R.id.id15);
+        listaIdsButtons.add(R.id.id16);
+        listaIdsButtons.add(R.id.id17);
+        listaIdsButtons.add(R.id.id18);
+        listaIdsButtons.add(R.id.id19);
+        listaIdsButtons.add(R.id.id20);
+        listaIdsButtons.add(R.id.id21);
+        listaIdsButtons.add(R.id.id22);
+        listaIdsButtons.add(R.id.id23);
+        listaIdsButtons.add(R.id.id24);
+        listaIdsButtons.add(R.id.id25);
+        listaIdsButtons.add(R.id.id26);
+
+        for (int j = 0; j<listaIdsButtons.size();j++)
+        {
+            Button b = findViewById(listaIdsButtons.get(j));
+            b.setOnClickListener(this);
+        }
+
     }
      private String sorteiapalavras(){
         String retorno = new String();
@@ -86,6 +123,7 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
         for(int i=0; i<estado.length;i++){
             estado[1] = '_';
         }
+        atualizatexto();
      }
 
      public void  atualizatexto(){
@@ -100,12 +138,15 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
 
     public void atualizaForca(){indiceListaImagem++;
         imagem.setImageResource(listaimagens.get(indiceListaImagem));
+        atualizaForca();
+        texto = findViewById(R.id.textView3);
     }
 
     @Override
-    public void onClick(View v) {
-        atualizaForca();
-        texto = findViewById(R.id.textView3);
+    public void onClick(View view) {
+        Button b = (Button) view;
+        texto.setText(b.getText().toString());
 
     }
+
 }
