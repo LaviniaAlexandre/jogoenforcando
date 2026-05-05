@@ -15,6 +15,7 @@
         android:layout_margin="15dp"
         android:layout_weight="0.25"
         android:background="@drawable/borda"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="visible">
 
@@ -80,7 +81,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.20"
                 android:backgroundTint="#6967589D"
-                android:text="a"
+                android:text="A"
                 android:visibility="visible" />
 
             <Button
@@ -90,7 +91,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.20"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a"
+                android:text="B"
                 android:visibility="visible" />
 
             <Button
@@ -100,7 +101,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.20"
                 android:backgroundTint="#6967589D"
-                android:text="a"
+                android:text="C"
                 android:visibility="visible" />
 
             <Button
@@ -110,7 +111,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="0.20"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a"
+                android:text="D"
                 android:visibility="visible" />
 
             <Button
@@ -121,7 +122,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="0.20"
                 android:backgroundTint="#6967589D"
-                android:text="a"
+                android:text="E"
                 android:visibility="visible" />
         </LinearLayout>
 
@@ -140,7 +141,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a"
+                android:text="F"
                 android:textColorLink="#121D33" />
 
             <Button
@@ -150,7 +151,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a"
+                android:text="G"
                 android:textColorLink="#121D33" />
 
             <Button
@@ -160,7 +161,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a"
+                android:text="H"
                 android:textColorLink="#121D33" />
 
             <Button
@@ -170,7 +171,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a"
+                android:text="I"
                 android:textColorLink="#121D33" />
 
             <Button
@@ -181,7 +182,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a"
+                android:text="J"
                 android:textColorLink="#121D33" />
         </LinearLayout>
 
@@ -200,7 +201,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="K" />
 
             <Button
                 android:id="@+id/id12"
@@ -209,7 +210,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="L" />
 
             <Button
                 android:id="@+id/id13"
@@ -218,7 +219,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="M" />
 
             <Button
                 android:id="@+id/id14"
@@ -227,7 +228,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="N" />
 
             <Button
                 android:id="@+id/id15"
@@ -237,7 +238,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="O" />
         </LinearLayout>
 
         <LinearLayout
@@ -255,7 +256,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="P" />
 
             <Button
                 android:id="@+id/id17"
@@ -264,7 +265,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="Q" />
 
             <Button
                 android:id="@+id/id18"
@@ -273,7 +274,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="R" />
 
             <Button
                 android:id="@+id/id19"
@@ -282,7 +283,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="S" />
 
             <Button
                 android:id="@+id/id20"
@@ -292,7 +293,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="T" />
 
         </LinearLayout>
 
@@ -311,7 +312,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="U" />
 
             <Button
                 android:id="@+id/id22"
@@ -320,7 +321,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="V" />
 
             <Button
                 android:id="@+id/id23"
@@ -329,7 +330,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="W" />
 
             <Button
                 android:id="@+id/id24"
@@ -338,7 +339,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="X" />
 
             <Button
                 android:id="@+id/id25"
@@ -347,7 +348,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#6967589D"
-                android:text="a" />
+                android:text="Y" />
 
             <Button
                 android:id="@+id/id26"
@@ -357,7 +358,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#69FFB8E4"
-                android:text="a" />
+                android:text="Z" />
         </LinearLayout>
     </LinearLayout>
 
