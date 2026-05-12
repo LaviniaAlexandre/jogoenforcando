@@ -1,5 +1,6 @@
 package com.example.enforcando;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -21,9 +23,9 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
     private ArrayList<Integer> listaimagens;
     private ArrayList<String> listapalavras;
     private ArrayList<Integer> listaIdsButtons;
-    private int indiceListaImagem;
+    private int indiceListaImagem, contaAcerto, contaErro;
 
-    private TextView texto;
+    private TextView texto, txAcerto, txErro;
 
     private Button b1;
 
@@ -43,7 +45,10 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
             return insets;
         });
 
-
+        txAcerto = findViewById(R.id.textView4);
+        txErro = findViewById(R.id.textView8);
+        contaAcerto = 0;
+        contaErro = 0;
         imagem = findViewById(R.id.imageView2);
         indiceListaImagem = -1;
         listaimagens = new ArrayList<Integer>();
@@ -123,9 +128,52 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
         palavra = sorteiapalavras();
         estado = new char[palavra.length()];
         for(int i=0; i<estado.length;i++){
-            estado[1] = '_';
+            estado[i] = '_';
         }
+
+        txAcerto.setText("o");
+        txAcerto.setText(Integer.toString((contaAcerto))'+'/'+' Integer.toString(listaimagens.size());
         atualizatexto();
+         for (int j = 0; j<listaIdsButtons.size();j++)
+         {
+             Button b = findViewById(listaIdsButtons.get(j));
+             b.setEnabled(true);
+         }
+     }
+
+     public void cheaseterminou(){
+        boolean verifica = false;
+        for(int i=0; i<estado.length; i++) {
+            if (estado [i]=='-') {
+                //se der true, ainda tem jogo
+                verifica = true;
+            }
+         }
+        //se tiver false, é pq ganhou
+         if(!verifica){
+             AlertDialog.Builder caixa = new AlertDialog.Builder(this);
+             caixa.setTitle("Você Venceu!!!!!");
+             caixa.setMessage("Deseja jogar novamente??");
+             caixa.setPositiveButton("Jogar", new DialogInterface.OnClickListener() {
+                 @Override
+                 public void onClick(DialogInterface dialog, int which) {
+                     inicializajogo();
+                 }
+             });
+             caixa.show();
+         }
+         if(contaErro >= listaimagens.size()){
+             AlertDialog.Builder caixa = new AlertDialog.Builder(this);
+             caixa.setTitle("Você Perdeu Playboy!!!!!");
+             caixa.setMessage("Deseja jogar novamente??");
+             caixa.setPositiveButton("Jogar", new DialogInterface.OnClickListener() {
+                 @Override
+                 public void onClick(DialogInterface dialog, int which) {
+                     inicializajogo();
+                 }
+             });
+             caixa.show();
+         }
      }
 
      public void verificaLetra(char c){
@@ -138,8 +186,16 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
          }
         if(status){
             atualizaForca();
+            contaErro++;
+            txErro.setText(Integer.toString((contaErro))"+"/"+" Integer.toString(listaimagens.size()));
         }
-        else
+        else {
+            atualizatexto();
+            contaAcerto++;
+            txAcerto.setText(Integer.toString((contaAcerto))"+"/"+" Integer.toString(listaimagens.size()));
+
+        }
+         cheaseterminou();
      }
 
      public void  atualizatexto(){
@@ -161,7 +217,7 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         Button b = (Button) view;
-        verificaLetra(b.getText().toString().chaAt(0));
+        verificaLetra(b.getText().toString().charAt(0));
         b.setEnabled(false);
         texto.setText(b.getText().toString());
 
