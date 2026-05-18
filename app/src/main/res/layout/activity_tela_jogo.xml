@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_weight="0.5"
-        android:background="@drawable/borda"
+        android:background="#A2D7E6"
         android:gravity="center"
         android:orientation="horizontal"
         android:visibility="visible">
@@ -39,7 +39,9 @@
             android:id="@+id/acerto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_weight="0.5"
+            android:background="@drawable/borda"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -61,7 +63,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Acertos" />
+                    android:text="Acertos"
+                    android:textSize="24dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -75,7 +78,8 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0" />
+                    android:text="0"
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -84,11 +88,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
+            android:background="@drawable/borda"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -105,14 +110,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Erros" />
+                    android:text="Erros"
+                    android:textSize="24sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_weight="0.5"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -120,7 +125,8 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1/10" />
+                    android:text="1/10"
+                    android:textSize="24sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
